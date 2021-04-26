@@ -3,24 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <title>Instagram - Login</title>
   </head>
   <body>
     <main>
       <div class="banner">
-        <img src="img/img/banner-login.png" alt="banner" />
+        <img src="/img/banner-login.png" alt="banner" />
         <p>
           <b><u>Cadastre-se para ver fotos dos seus amigos</u></b>
         </p>
       </div>
       <div class="cadastro">
-        <img src="img/img/logo.png" alt="instagram" class="logo-registro" />
-        <form>
+        <img src="/img/logo.png" alt="instagram" class="logo-registro" />
+        <form action="/usuarios" method="POST">
           <input
-            type="name"
-            name="email"
-            id="email"
+            type="nome"
+            name="nome"
+            id="nome"
             placeholder="Digite seu nome"
           />
 
@@ -38,8 +38,8 @@
           />
           <input
             type="password"
-            name="senha"
-            id="senha"
+            name="confirmaSenha"
+            id="confirmaSenha"
             placeholder="Confirme a sua senha"
           />
           <button type="submit">Cadastre-se</button>
@@ -54,7 +54,7 @@
           <p>
             Tem uma conta?
             <b
-              ><u><a href="login.html">Conecte-se</a></u></b
+              ><u><a href="/usuarios/login">Conecte-se</a></u></b
             >
           </p>
         </div>

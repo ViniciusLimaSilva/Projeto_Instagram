@@ -11,7 +11,7 @@ module.exports = async (req, res, next) => {
       res.status(400).json({ erro: 'Email já cadastrado ' });
       return;
     } else {
-      if (senha.length < 6 || senha.length > 12) {
+      if (senha.length < 6 || senha.length > 20) {
         res.status(400).json({
           erro: 'Senha deve conter no mínimo 6 dígitos e no máximo 12 ',
         });

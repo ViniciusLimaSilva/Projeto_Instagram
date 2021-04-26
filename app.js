@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const session = require('express-session');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/UsersRouter');
 var postsRouter = require('./routes/PostsRouter');
@@ -13,6 +15,14 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+app.use(
+  session({
+    secret: 'instagram-avanade',
+    saveUninitialized: true,
+    resave: true,
+  })
+);
 
 app.use(logger('dev'));
 app.use(express.json());
